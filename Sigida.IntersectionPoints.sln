@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntersectionPoint.View", "IntersectionPoint.View\IntersectionPoint.View.csproj", "{D1A83F97-07EA-4BAF-8101-08A258DE49CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntersactionPont.MathLogic", "IntersactionPont.MathLogic\IntersactionPont.MathLogic.csproj", "{ABF29896-105D-4A83-82FA-A96EA7FF43F4}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1A83F97-07EA-4BAF-8101-08A258DE49CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A83F97-07EA-4BAF-8101-08A258DE49CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A83F97-07EA-4BAF-8101-08A258DE49CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A83F97-07EA-4BAF-8101-08A258DE49CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF29896-105D-4A83-82FA-A96EA7FF43F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF29896-105D-4A83-82FA-A96EA7FF43F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF29896-105D-4A83-82FA-A96EA7FF43F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF29896-105D-4A83-82FA-A96EA7FF43F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
