@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntersectionPoint.cs" />
+    <Compile Include="IntersectionsPoint.cs" />
     <Compile Include="Model\Line.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

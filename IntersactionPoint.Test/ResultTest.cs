@@ -2,19 +2,46 @@
 using System;
 using IntersactionPont.MathLogic;
 using System.Numerics;
+using IntersactionPont.MathLogic.Model;
 
 namespace IntersactionPoint.Test
 {
     [TestClass]
     public class ResultTest
     {
+
         [TestMethod]
-        public void CheckIntersactionPointValue()
+        public void IntersectionPoint_Check_IsCrosing()
         {
-            Vector2 correct = new Vector2(4, 8);
+            //Arrange
+            Vector2 expected = new Vector2(8, 4);
 
+            Line line = new Line(new Vector2(2,2), new Vector2(11,5));
+            Line line2 = new Line(new Vector2(2,7), new Vector2(12,2));
+            var intersaction = new IntersectionsPoint(line, line2);
 
-            Assert.AreEqual(correct, new Vector2(4, 8));
+            //Act
+            var actual = intersaction.Find();
+
+            //Assert 
+            Assert.AreEqual(expected, actual.Result, $"Test completed with \"{actual.Message}\"");
+        }
+
+        [TestMethod]
+        public void IntersectionPoint_Check_IsParallel()
+        {
+            //Arrange
+            Vector2 expected = new Vector2(0, 0);
+
+            Line line = new Line(new Vector2(2, 3), new Vector2(6, 7));
+            Line line2 = new Line(new Vector2(8, 1), new Vector2(11, 4));
+            var intersaction = new IntersectionsPoint(line, line2);
+
+            //Act
+            var actual = intersaction.Find();
+
+            //Assert 
+            Assert.AreEqual(expected, actual.Result, $"Test completed with \"{actual.Message}\"");
         }
     }
 }
