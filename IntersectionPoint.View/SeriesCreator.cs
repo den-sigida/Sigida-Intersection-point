@@ -15,18 +15,48 @@ namespace IntersectionPoint.View
                 ChartType = SeriesChartType.Line              
             };
 
-            series.Points.Add(new DataPoint(vector1.X, vector1.Y));
-            series.Points.Add(new DataPoint(vector2.X, vector2.Y));
+            var point1 = new DataPoint(vector1.X, vector1.Y)
+            {
+                Label = $"{name}: [{vector1.X}:{vector1.Y}]",
+                LabelForeColor = System.Drawing.Color.White,
+                Font = new System.Drawing.Font("Noto Sans", 10)
+            };
+
+
+            var point2 = new DataPoint(vector2.X, vector2.Y)
+            {
+                Label = $"{name}: [{vector1.X}:{vector1.Y}]",
+                LabelForeColor = System.Drawing.Color.White,
+                Font = new System.Drawing.Font("Noto Sans", 10)
+            };
+
+            series.Points.Add(point1);
+            series.Points.Add(point2);
 
             return series;
         }
 
         public static Series CreateDot(Vector2 vector)
         {
-            return new Series()
+            var series = new Series()
             {
-
+                XValueType = ChartValueType.Double,
+                YValueType = ChartValueType.Double,
+                ChartType = SeriesChartType.Point,
+                ToolTip = $"Cross {vector.X}:{vector.Y}"
             };
+
+
+            var point1 = new DataPoint(vector.X, vector.Y)
+            {
+                Label = $"Cross: [{vector.X}:{vector.Y}]",
+                LabelForeColor = System.Drawing.Color.White,
+                Font = new System.Drawing.Font("Noto Sans", 10)
+            };
+
+            series.Points.Add(point1);
+
+            return series;
         }
     }
 }
