@@ -18,23 +18,20 @@ namespace IntersectionPoint.View
         public Form1()
         {
             InitializeComponent();
-            textPointFX.TextChanged += GenerateChart;
-            textPointFY.TextChanged += GenerateChart;
-            textPointSX.TextChanged += GenerateChart;
-            textPointSY.TextChanged += GenerateChart;
-
-        }
-
-        public void GenerateChart(object sender, EventArgs e)
-        {
-            chartFunction.Series.Clear();
-
-            chartFunction.Series.Add(SeriesCreator.CreateLine("Line1",new Vector2(float.Parse(textPointFX.Text), float.Parse(textPointFY.Text)), 
-                                                                      new Vector2(float.Parse(textPointSX.Text), float.Parse(textPointSY.Text))));
             
+
         }
 
-       
+        private void SeriesDataChanged(object sender, EventArgs e)
+        {
+            //chartFunction.Series[0].Points[0].XValue = float.Parse(textPointFX.Text);
+            //chartFunction.Series[0].Points[0].YValues = new double[] { float.Parse(textPointFY.Text) };
+            //chartFunction.Update();
+
+        }
+
+
+
     }
 
 
