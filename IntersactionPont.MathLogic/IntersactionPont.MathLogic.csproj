@@ -45,6 +45,7 @@
     <Compile Include="IntersectionsPoint.cs" />
     <Compile Include="Model\Line.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StraightLine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

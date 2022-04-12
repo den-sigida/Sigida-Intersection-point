@@ -25,7 +25,7 @@ namespace IntersectionPoint.View
 
             var point2 = new DataPoint(vector2.X, vector2.Y)
             {
-                Label = $"{name}: [{vector1.X}:{vector1.Y}]",
+                Label = $"{name}: [{vector2.X}:{vector2.Y}]",
                 LabelForeColor = System.Drawing.Color.White,
                 Font = new System.Drawing.Font("Noto Sans", 10)
             };

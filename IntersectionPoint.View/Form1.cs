@@ -42,24 +42,35 @@ namespace IntersectionPoint.View
             chartFunction.Update();
         }
 
+
         private void button_FindCross_Click(object sender, EventArgs e)
         {
 
             Generate();
             SecondLineDataChanged(null, null);
 
-            var line1 = new Line(new Vector2(float.Parse(valueLine1Point1X.Text), float.Parse(valueLine1Point1Y.Text)), 
-                                 new Vector2(float.Parse(valueLine1Point2X.Text), float.Parse(valueLine1Point2Y.Text)));
+            GenerateCrossPoint();
+            
+
+        }
+
+        private void GenerateFirstLine()
+        {
+
+        }
+
+        private void GenerateCrossPoint()
+        {
+            var line1 = new Line(new Vector2(float.Parse(valueLine1Point1X.Text), float.Parse(valueLine1Point1Y.Text)),
+                                new Vector2(float.Parse(valueLine1Point2X.Text), float.Parse(valueLine1Point2Y.Text)));
             var line2 = new Line(new Vector2(float.Parse(valueLine2Point1X.Text), float.Parse(valueLine2Point1Y.Text)),
                                  new Vector2(float.Parse(valueLine2Point2X.Text), float.Parse(valueLine2Point2Y.Text)));
 
             var intersaction = new IntersectionsPoint(line1, line2);
             var crossPoint = intersaction.Find();
 
-            if(crossPoint.IsSuccessfully)
+            if (crossPoint.IsSuccessfully)
                 chartFunction.Series.Add(SeriesCreator.CreateDot(new Vector2(crossPoint.Result.X, crossPoint.Result.Y)));
-            
-
         }
     }
 

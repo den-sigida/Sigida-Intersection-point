@@ -7,7 +7,7 @@ using IntersactionPont.MathLogic.Model;
 namespace IntersactionPoint.Test
 {
     [TestClass]
-    public class ResultTest
+    public class IntersactionsPointTests
     {
 
         [TestMethod]
