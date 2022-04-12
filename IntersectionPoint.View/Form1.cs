@@ -20,6 +20,7 @@ namespace IntersectionPoint.View
         public Form1()
         {
             InitializeComponent();
+            
 
         }
 
@@ -46,9 +47,8 @@ namespace IntersectionPoint.View
         private void button_FindCross_Click(object sender, EventArgs e)
         {
 
-            Generate();
-            SecondLineDataChanged(null, null);
-
+            GenerateFirstLine();
+            GenerateSecondLine();
             GenerateCrossPoint();
             
 
@@ -56,7 +56,61 @@ namespace IntersectionPoint.View
 
         private void GenerateFirstLine()
         {
+            chartFunction.Series.Clear();
 
+            //Все используемые textBox для первой линии
+            var valuepointString = new string[] { valueLine1Point1X.Text, valueLine1Point1Y.Text, valueLine1Point2X.Text, valueLine1Point2Y.Text };
+            var listFloatValuePoint = new List<float>();
+
+            //Парсим все значения
+            foreach (var item in valuepointString)
+            {
+                listFloatValuePoint.Add(StringParser.StringParser.Parse(item));
+            }
+
+            //Записываем считываемые точки
+            Vector2 point1 = new Vector2(listFloatValuePoint[0], listFloatValuePoint[1]);
+            Vector2 point2 = new Vector2(listFloatValuePoint[2], listFloatValuePoint[3]);
+
+            Line line = new Line(point1, point2);
+
+            var strLine = new StraightLine(line);
+
+            chartFunction.Series.Add(
+                                 SeriesCreator.CreateLine("Line1",
+                                                          strLine.FindPointY(point1.X + 10), strLine.FindPointY(-point1.X + (-10))));
+         
+
+            chartFunction.Update();
+        }
+
+        private void GenerateSecondLine()
+        {
+
+            //Все используемые textBox для первой линии
+            var valuepointString = new string[] { valueLine2Point1X.Text, valueLine2Point1Y.Text, valueLine2Point2X.Text, valueLine2Point2Y.Text };
+            var listFloatValuePoint = new List<float>();
+
+            //Парсим все значения
+            foreach (var item in valuepointString)
+            {
+                listFloatValuePoint.Add(StringParser.StringParser.Parse(item));
+            }
+
+            //Записываем считываемые точки
+            Vector2 point1 = new Vector2(listFloatValuePoint[0], listFloatValuePoint[1]);
+            Vector2 point2 = new Vector2(listFloatValuePoint[2], listFloatValuePoint[3]);
+
+            Line line = new Line(point1, point2);
+
+            var strLine = new StraightLine(line);
+
+            chartFunction.Series.Add(
+                                 SeriesCreator.CreateLine("Line2",
+                                                          strLine.FindPointY(point1.X + 10), strLine.FindPointY(-point1.X + (-10))));
+
+
+            chartFunction.Update();
         }
 
         private void GenerateCrossPoint()

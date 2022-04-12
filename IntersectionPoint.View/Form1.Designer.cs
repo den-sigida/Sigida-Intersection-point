@@ -153,6 +153,7 @@
             this.valueLine1Point2Y.TabIndex = 8;
             this.valueLine1Point2Y.Text = "0";
             this.valueLine1Point2Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine1Point2Y.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // valueLine1Point2X
             // 
@@ -168,6 +169,7 @@
             this.valueLine1Point2X.TabIndex = 7;
             this.valueLine1Point2X.Text = "0";
             this.valueLine1Point2X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine1Point2X.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // label7
             // 
@@ -240,6 +242,7 @@
             this.valueLine1Point1Y.TabIndex = 6;
             this.valueLine1Point1Y.Text = "0";
             this.valueLine1Point1Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine1Point1Y.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // label5
             // 
@@ -272,6 +275,7 @@
             this.valueLine1Point1X.TabIndex = 5;
             this.valueLine1Point1X.Text = "0";
             this.valueLine1Point1X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine1Point1X.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // label4
             // 
@@ -373,6 +377,7 @@
             this.valueLine2Point2Y.TabIndex = 8;
             this.valueLine2Point2Y.Text = "0";
             this.valueLine2Point2Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine2Point2Y.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // valueLine2Point2X
             // 
@@ -388,6 +393,7 @@
             this.valueLine2Point2X.TabIndex = 7;
             this.valueLine2Point2X.Text = "0";
             this.valueLine2Point2X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine2Point2X.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // label8
             // 
@@ -460,6 +466,7 @@
             this.valueLine2Point1Y.TabIndex = 6;
             this.valueLine2Point1Y.Text = "0";
             this.valueLine2Point1Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine2Point1Y.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // label10
             // 
@@ -492,6 +499,7 @@
             this.valueLine2Point1X.TabIndex = 5;
             this.valueLine2Point1X.Text = "0";
             this.valueLine2Point1X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.valueLine2Point1X.TextChanged += new System.EventHandler(this.button_FindCross_Click);
             // 
             // label11
             // 
