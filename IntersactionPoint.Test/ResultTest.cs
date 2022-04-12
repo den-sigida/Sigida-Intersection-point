@@ -43,5 +43,24 @@ namespace IntersactionPoint.Test
             //Assert 
             Assert.AreEqual(expected, actual.Result, $"Test completed with \"{actual.Message}\"");
         }
+
+        [TestMethod]
+        public void IntersectionPoint_Check_IsNotCross()
+        {
+            //Arrange
+            Vector2 expected = new Vector2(0, 0);
+
+            Line line = new Line(new Vector2(3, 4), new Vector2(10, 2));
+            Line line2 = new Line(new Vector2(5, 6), new Vector2(1, 9));
+            var intersaction = new IntersectionsPoint(line, line2);
+
+            //Act
+            var actual = intersaction.Find();
+
+            //Assert 
+            Assert.AreEqual(expected, actual.Result, $"Test completed with \"{actual.Message}\"");
+        }
+
+
     }
 }

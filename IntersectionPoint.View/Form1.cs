@@ -56,7 +56,8 @@ namespace IntersectionPoint.View
             var intersaction = new IntersectionsPoint(line1, line2);
             var crossPoint = intersaction.Find();
 
-            chartFunction.Series.Add(SeriesCreator.CreateDot(new Vector2(crossPoint.Result.X, crossPoint.Result.Y)));
+            if(crossPoint.IsSuccessfully)
+                chartFunction.Series.Add(SeriesCreator.CreateDot(new Vector2(crossPoint.Result.X, crossPoint.Result.Y)));
             
 
         }
